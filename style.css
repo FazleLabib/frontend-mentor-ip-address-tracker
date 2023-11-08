@@ -35,6 +35,42 @@ body, main {
     background-size: 100%;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: white;
+    padding: 2rem 0;
+}
+
+.container input[type=text] {
+    width: 35rem;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.container input[type=text]:focus {
+    outline: none;
+}
+
+.container button {
+    border: none;
+    outline: none;
+    background-color: black;
+    padding: 1.05rem;
+    border-radius: 0 1rem 1rem 0;
+    margin-left: -0.15rem;
+}
+
 footer {
     position: absolute;
     bottom: 1rem;
