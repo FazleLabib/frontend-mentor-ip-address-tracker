@@ -71,6 +71,37 @@ body, main {
     margin-left: -0.15rem;
 }
 
+.results {
+    margin-top: 9rem;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px -20px var(--dark-gray);
+}
+
+.result-item h2 {
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color: var(--dark-gray);
+    padding-bottom: 0.5rem;
+}
+
+.result-item p {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.divider {
+    margin-top: 0.5rem;
+    width: 2px;
+    height: 4rem;
+    background-color: var(--dark-gray);
+}
+
 footer {
     position: absolute;
     bottom: 1rem;
