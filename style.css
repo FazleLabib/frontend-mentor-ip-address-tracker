@@ -50,12 +50,14 @@ body, main {
 }
 
 .container input[type=text] {
+    cursor: pointer;
     width: 35rem;
     border: none;
     border-radius: 1rem 0 0 1rem;
     padding: 1rem;
     font-weight: 400;
     font-size: 1rem;
+    color: var(--very-dark-gray);
 }
 
 .container input[type=text]:focus {
@@ -63,12 +65,18 @@ body, main {
 }
 
 .container button {
+    cursor: pointer;
     border: none;
     outline: none;
     background-color: black;
     padding: 1.05rem;
     border-radius: 0 1rem 1rem 0;
     margin-left: -0.15rem;
+}
+
+.container button:hover {
+    transition: .2s ease-out;
+    background-color: var(--very-dark-gray);
 }
 
 .results {
