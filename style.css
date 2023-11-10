@@ -115,3 +115,48 @@ footer {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
+
+@media screen and (max-width: 750px) {
+
+    .background {
+        background: url(./images/pattern-bg-mobile.png) no-repeat;
+        background-position: top center;
+        background-size: 100%;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container input[type=text] {
+        width: 15rem;
+    }
+
+    .results {
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+    
+    .result-item h2 {
+        font-weight: 700;
+        font-size: 0.65rem;
+        text-align: center;
+    }
+    
+    .result-item p {
+        text-align: center;
+        font-size: 1.65rem;
+    }
+    
+    .divider {
+        display: none;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0.5rem;
+    }
+
+}
