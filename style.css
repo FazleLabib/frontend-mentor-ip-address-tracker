@@ -142,9 +142,10 @@ footer {
     }
 
     .results {
+        width: 80%;
         flex-direction: column;
         margin-top: 2rem;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .result-item h2 {
@@ -155,7 +156,7 @@ footer {
     
     .result-item p {
         text-align: center;
-        font-size: 1.65rem;
+        font-size: 1.5rem;
     }
     
     .divider {
