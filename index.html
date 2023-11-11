@@ -20,32 +20,32 @@
   <main>
     <div class="container">
       <h1>IP Address Tracker</h1>
-      <form action="">
-        <input type="text" placeholder="Search for any IP address or domain" name="search">
-        <button type="submit"><img src="./images/icon-arrow.svg" alt="Icon of a right pointing arrow"></button>
+      <form action="javascript:void(0);">
+        <input id="search-input" type="text" placeholder="Search for any IP address or domain" name="search">
+        <button id="submit-btn" type="submit"><img src="./images/icon-arrow.svg" alt="Icon of a right pointing arrow"></button>
       </form>
       <div class="results">
         <div class="result-item" >
           <h2>IP Address</h2>
-          <p id="ip-address">192.212.174.101</p>
+          <p id="ip-address"></p>
         </div>
         <div class="divider"></div>
 
         <div class="result-item">
           <h2>Location</h2>
-          <p id="location">Brooklyn, NY, 10001</p>
+          <p id="location"></p>
         </div>
         <div class="divider"></div>
 
         <div class="result-item" >
           <h2>Timezone</h2>
-          <p id="timezone">UTC -05:00<!-- add offset value dynamically using the API --></p>
+          <p id="timezone"></p>
         </div>
         <div class="divider"></div>
 
         <div class="result-item" >
           <h2>ISP</h2>
-          <p id="isp">SpaceX Starlink</p>
+          <p id="isp"></p>
         </div>
       </div>
     </div>
@@ -58,5 +58,6 @@
       Coded by <a href="https://github.com/FazleLabib">Fazle Labib</a>.
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
