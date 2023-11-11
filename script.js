@@ -32,12 +32,12 @@ async function showInfo(url) {
 }
 
 submitBtn.addEventListener("click", ()=> {
-  let url = `${apiURL}${apiKey}&ipAddress=${searchInput.value}`;
+  let url = `${apiURL}${process.env.API_KEY}&ipAddress=${searchInput.value}`;
   showInfo(url);
 });
 
 // Run on page load
 window.addEventListener('load', async () => {
-  let url = `${apiURL}${apiKey}`;
+  let url = `${apiURL}${process.env.API_KEY}`;
   showInfo(url);
 });
