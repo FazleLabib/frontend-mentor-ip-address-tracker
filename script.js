@@ -1,7 +1,5 @@
-// import config from './config.js';
+import API_KEY from "./build.js";
 
-// const apiKey = config.apiKey;
-const apiKey = process.env.API_KEY;
 const apiURL = "https://geo.ipify.org/api/v2/country?apiKey=";
 
 const searchInput = document.getElementById('search-input');
@@ -32,12 +30,12 @@ async function showInfo(url) {
 }
 
 submitBtn.addEventListener("click", ()=> {
-  let url = `${apiURL}${process.env.API_KEY}&ipAddress=${searchInput.value}`;
+  let url = `${apiURL}${API_KEY}&ipAddress=${searchInput.value}`;
   showInfo(url);
 });
 
 // Run on page load
 window.addEventListener('load', async () => {
-  let url = `${apiURL}${process.env.API_KEY}`;
+  let url = `${apiURL}${API_KEY}`;
   showInfo(url);
 });
