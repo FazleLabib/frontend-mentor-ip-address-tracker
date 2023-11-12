@@ -1,6 +1,6 @@
 import API_KEY from "./build.js";
 
-const apiURL = "https://geo.ipify.org/api/v2/country?apiKey=";
+const apiURL = "https://geo.ipify.org/api/v2/country,city?apiKey=";
 
 const searchInput = document.getElementById('search-input');
 const submitBtn = document.getElementById('submit-btn');
@@ -21,7 +21,7 @@ async function showInfo(url) {
       let data = await response.json();
 
       ip.innerHTML = data.ip;
-      locationInfo.innerHTML = `${data.location['region']}, ${data.location['country']}`;
+      locationInfo.innerHTML = `${data.location['city']},<br> ${data.location['region']}, ${data.location['country']}`;
       timezone.innerHTML = `UTC ${data.location['timezone']}`;
       isp.innerHTML = data.isp;
 
