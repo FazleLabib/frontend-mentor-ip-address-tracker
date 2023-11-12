@@ -131,12 +131,6 @@ footer {
 
 @media screen and (max-width: 750px) {
 
-    /* .background {
-        background: url(./images/pattern-bg-mobile.png) no-repeat;
-        background-position: top center;
-        background-size: 100%;
-    } */
-
     #background-img {
         aspect-ratio: 1.25;
         background: url(./images/pattern-bg-mobile.png) no-repeat;
