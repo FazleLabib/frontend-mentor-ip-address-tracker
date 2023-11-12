@@ -123,7 +123,7 @@ footer {
     bottom: 0;
     z-index: 2;
     background-color: hsla(100, 100%, 100%, 0.8);
-    padding: 5px;
+    padding: 3.5px;
 }
 
 .attribution { 
@@ -176,7 +176,15 @@ footer {
 
     footer {
         position: absolute;
-        bottom: 1.15rem;
+        left: 0;
     }
 
+    .attribution { 
+        font-size: 8px; 
+        text-align: left; 
+    }
+
+    .leaflet-control-zoom {
+        bottom: 0.65rem;
+    }
 }
