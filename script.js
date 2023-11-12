@@ -10,6 +10,27 @@ const locationInfo = document.getElementById('location');
 const timezone = document.getElementById('timezone');
 const isp = document.getElementById('isp');
 
+let map = L.map('map');
+map.zoomControl.setPosition('bottomleft');
+
+// Creates custom marker
+let locationIcon = L.icon({
+  iconUrl: "./images/icon-location.svg"
+});
+
+function showMap(latitude, longtitude) {
+
+  map.setView([latitude, longtitude], 15);
+
+  L.marker([latitude, longtitude], {icon: locationIcon}).addTo(map);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+}
+
 async function showInfo(url) {
 
     const response = await fetch(url);
@@ -24,6 +45,11 @@ async function showInfo(url) {
       locationInfo.innerHTML = `${data.location['city']},<br> ${data.location['region']}, ${data.location['country']}`;
       timezone.innerHTML = `UTC ${data.location['timezone']}`;
       isp.innerHTML = data.isp;
+
+      let latitude = data.location['lat'];
+      let longtitude = data.location['lng'];
+
+      showMap(latitude, longtitude);
 
     }
 
