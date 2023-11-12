@@ -20,6 +20,7 @@ body, main {
 
 .background {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -32,11 +33,14 @@ body, main {
     background: url(./images/pattern-bg-desktop.png) no-repeat;
     background-position: top center;
     background-size: cover;
+    z-index: 2
 }
 
 #map {
-    height: 589px;
+    flex: 1;
     position: relative;
+    width: 100%;
+    min-height: 450px;
 }
 
 .container {
@@ -135,10 +139,6 @@ footer {
         aspect-ratio: 1.25;
         background: url(./images/pattern-bg-mobile.png) no-repeat;
         background-size: cover;
-    }
-    
-    #map {
-        height: 480px;
     }
 
     .container h1 {
