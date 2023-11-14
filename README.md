@@ -72,6 +72,7 @@ The current design is not suitable for mobile screens. I plan to remake this sit
 ### Useful resources
 
 - [Hiding API Keys in Javascript Netlify](https://www.youtube.com/watch?v=2J3xbMkH2K4) - This helped with hiding the API key from github. I modified it to make it work for vercel. **Note: API key can still be seen using developer tools.**
+- [ipgeolocation API](https://ipgeolocation.io) - I'm using this API to fetch the data as this provides better free options than ipify.
 
 ## Author
 
