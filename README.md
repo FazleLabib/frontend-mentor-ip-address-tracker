@@ -14,6 +14,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Disclaimer](#disclaimer)
 
 ## Overview
 
@@ -77,3 +78,7 @@ The current design is not suitable for mobile screens. I plan to remake this sit
 ## Author
 
 - Frontend Mentor - [@FazleLabib](https://www.frontendmentor.io/profile/FazleLabib)
+
+## Disclaimer
+
+If it seems like the website is not working, you can try disabling some of the extensions you might have on your browser.
