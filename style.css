@@ -89,6 +89,23 @@ body, main {
     background-color: var(--very-dark-gray);
 }
 
+.error {
+    display: flex;
+    justify-content: flex-end;
+    width:max-content;
+    margin-top: 0.5rem;
+    background-color: #ff0033;
+    color: white;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
 .results {
     margin-top: 9rem;
     background-color: white;
