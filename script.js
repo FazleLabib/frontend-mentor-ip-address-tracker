@@ -10,6 +10,11 @@
 // const timezone = document.getElementById('timezone');
 // const isp = document.getElementById('isp');
 
+// const invalidIP = document.getElementById('invalid-ip');
+
+// const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){2}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+// const ipv6Regex = /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
+
 // let map = L.map('map');
 // map.zoomControl.setPosition('bottomleft');
 
@@ -55,15 +60,26 @@
 
 // }
 
-// submitBtn.addEventListener("click", ()=> {
-//   let url = `${apiURL}${API_KEY}&ipAddress=${searchInput.value}`;
-//   showInfo(url);
-// });
-
 // // Run on page load
 // window.addEventListener('load', async () => {
 //   let url = `${apiURL}${API_KEY}`;
 //   showInfo(url);
+// });
+
+// submitBtn.addEventListener("click", ()=> {
+
+//   if (ipv4Regex.test(searchInput.value) || ipv6Regex.test(searchInput.value)) {
+//     invalidIP.classList.add('hidden');
+//     let url = `${apiURL}${API_KEY}&ipAddress=${searchInput.value}`;
+//     showInfo(url);
+//   }
+
+//   else {
+//     invalidIP.classList.remove('hidden');
+//     let url = `${apiURL}${API_KEY}`;
+//     showInfo(url);
+//   }
+
 // });
 
 import API_KEY from "./build.js";
@@ -77,6 +93,11 @@ const ip = document.getElementById('ip-address');
 const locationInfo = document.getElementById('location');
 const timezone = document.getElementById('timezone');
 const isp = document.getElementById('isp');
+
+const invalidIP = document.getElementById('invalid-ip');
+
+const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){2}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+const ipv6Regex = /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
 
 let map = L.map('map');
 map.zoomControl.setPosition('bottomleft');
@@ -123,13 +144,24 @@ async function showInfo(url) {
 
 }
 
-submitBtn.addEventListener("click", ()=> {
-  let url = `${apiURL}${API_KEY}&ip=${searchInput.value}`;
-  showInfo(url);
-});
-
 // Run on page load
 window.addEventListener('load', async () => {
   let url = `${apiURL}${API_KEY}`;
   showInfo(url);
+});
+
+submitBtn.addEventListener("click", ()=> {
+
+  if (ipv4Regex.test(searchInput.value) || ipv6Regex.test(searchInput.value)) {
+    invalidIP.classList.add('hidden');
+    let url = `${apiURL}${API_KEY}&ip=${searchInput.value}`;
+    showInfo(url);
+  }
+
+  else {
+    invalidIP.classList.remove('hidden');
+    let url = `${apiURL}${API_KEY}`;
+    showInfo(url);
+  }
+
 });
